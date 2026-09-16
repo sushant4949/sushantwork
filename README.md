@@ -17,7 +17,7 @@ index.html          page shell
 css/style.css        styling
 js/data.js            all content (profile, experience, education, work items)
 js/main.js            rendering + interactions
-assets/                images and the downloadable résumé
+assets/                images, cropped photos and thumbnails
 ```
 
 ## Run locally

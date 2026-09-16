@@ -1,38 +1,41 @@
-// Category label + accent letter used when there's no real thumbnail image.
+// Letterform shown when an item has no real thumbnail.
 const CAT_MARK = {
   reports: "R", events: "E", campaigns: "C", articles: "A",
   blogs: "B", films: "F", websites: "W", social: "S", facilitation: "L",
 };
 
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
 function monthYear(dateStr) {
   const [y, m] = dateStr.split("-").map(Number);
-  const names = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-  return `${names[m - 1]} ${y}`;
+  return `${MONTHS[m - 1]} ${y}`;
 }
 
 function fmtPeriod(item) {
   const [y, m] = item.start.split("-").map(Number);
-  const names = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-  const startStr = `${names[m - 1]} ${y}`;
-  const endStr = item.end === "Present" ? `<span class="present">Present</span>` : item.end;
+  const startStr = `${MONTHS[m - 1]} ${y}`;
+  let endStr;
+  if (item.end === "Present") {
+    endStr = `<span class="present">Present</span>`;
+  } else {
+    const [ey, em] = item.end.split("-").map(Number);
+    endStr = `${MONTHS[em - 1]} ${ey}`;
+  }
   return `${startStr} — ${endStr}`;
 }
 
 function renderHero() {
-  document.getElementById("hero-name").textContent = PROFILE.name;
   document.getElementById("hero-summary").textContent = PROFILE.summary;
-  document.getElementById("hero-photo").src = PROFILE.photo;
-  document.getElementById("hero-photo").alt = PROFILE.name;
+  const photo = document.getElementById("hero-photo");
+  photo.src = PROFILE.photo;
+  photo.alt = PROFILE.name;
   document.querySelectorAll("[data-email]").forEach(el => el.href = `mailto:${PROFILE.email}`);
   document.querySelectorAll("[data-linkedin]").forEach(el => el.href = PROFILE.linkedin);
   document.querySelectorAll("[data-linktree]").forEach(el => el.href = PROFILE.linktree);
-  document.querySelectorAll("[data-resume]").forEach(el => el.href = PROFILE.resume);
-  document.getElementById("brand-name").textContent = PROFILE.name.split(" ")[0];
 }
 
 function renderStats() {
-  const wrap = document.getElementById("hero-stats");
-  wrap.innerHTML = STATS.map(s => `
+  document.getElementById("hero-stats").innerHTML = STATS.map(s => `
     <div class="stat">
       <b data-count="${s.n}" data-suffix="${s.suffix}">0${s.suffix}</b>
       <span>${s.label}</span>
@@ -48,7 +51,7 @@ function animateCounters() {
     function tick(now) {
       const p = Math.min(1, (now - start) / duration);
       const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(target * eased) + suffix;
+      el.textContent = Math.round(target * eased).toLocaleString("en-IN") + suffix;
       if (p < 1) requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
@@ -79,6 +82,20 @@ function renderExperience() {
     </div>`).join("");
 }
 
+function renderCannes() {
+  const c = CANNES_SPOTLIGHT;
+  document.getElementById("cannes-spotlight").innerHTML = `
+    <div class="cannes-photos">
+      ${c.photos.map((p, i) => `<figure class="cannes-photo"><img src="${p}" alt="Sushant Kumar at Cannes Lions 2026, photo ${i + 1}" loading="lazy"></figure>`).join("")}
+    </div>
+    <div class="cannes-copy">
+      <img class="cannes-logo" src="${c.logo}" alt="Cannes Lions — International Festival of Creativity">
+      <div class="eyebrow">Spotlight · June 2026</div>
+      <h3>${c.caption}</h3>
+      <p>Took <em>Mothers of Courage</em> — India's only SDG Lions–shortlisted campaign — to the Palais in Cannes, and was selected for the festival's Equity, Representation & Accessibility cohort.</p>
+    </div>`;
+}
+
 function renderAchievements() {
   document.getElementById("ach-grid").innerHTML = ACHIEVEMENTS.map((a, i) => `
     <div class="ach-card reveal">
@@ -92,42 +109,64 @@ let visibleCount = 12;
 const PAGE_SIZE = 12;
 
 function thumbHTML(item) {
-  const catLetter = CAT_MARK[item.category] || "•";
   if (item.ytId) {
-    return `<img src="assets/img/yt_${item.ytId}.jpg" alt="${item.title}" loading="lazy">
+    return `<img src="assets/img/yt_${item.ytId}.jpg" alt="" loading="lazy">
             <div class="play"><span class="play-icon"></span></div>`;
   }
-  return `<div class="cat-mark">${catLetter}</div>`;
+  if (item.img) {
+    return `<img src="${item.img}" alt="" loading="lazy">`;
+  }
+  return `<div class="cat-mark cat-${item.category}">${CAT_MARK[item.category] || "•"}</div>`;
 }
 
 function cardHTML(item) {
-  const [y] = item.date.split("-");
-  const href = item.url || item.insta || "#";
+  const cat = CATEGORIES[item.category];
   return `
-    <a class="work-card reveal" href="${href}" target="_blank" rel="noopener">
+    <a class="work-card reveal" href="${item.url}" target="_blank" rel="noopener">
       <div class="work-thumb">
-        <span class="tag">${CATEGORIES[item.category]}</span>
+        <span class="tag">${cat.label}</span>
         <span class="yr">${monthYear(item.date)}</span>
         ${thumbHTML(item)}
       </div>
       <div class="work-body">
         <h3>${item.title}</h3>
+        <div class="card-role"><span>My role</span>${cat.roles}</div>
         <div class="org"><span>${item.org}</span><span class="arrow">↗</span></div>
       </div>
     </a>`;
 }
 
+function renderRoles() {
+  const el = document.getElementById("roles-panel");
+  if (currentFilter === "all") {
+    el.innerHTML = `
+      <div class="roles-grid">
+        ${Object.entries(CATEGORIES).map(([key, c]) => `
+          <button class="role-tile" data-jump="${key}">
+            <span class="role-tile-label">${c.label}</span>
+            <span class="role-tile-roles">${c.roles}</span>
+          </button>`).join("")}
+      </div>`;
+    el.querySelectorAll("[data-jump]").forEach(btn =>
+      btn.addEventListener("click", () => setFilter(btn.getAttribute("data-jump"))));
+  } else {
+    const c = CATEGORIES[currentFilter];
+    el.innerHTML = `
+      <div class="roles-banner">
+        <span class="roles-banner-label">Capacity engaged in · ${c.label}</span>
+        <div class="roles-chips">${c.roles.split(", ").map(r => `<span class="role-chip">${r}</span>`).join("")}</div>
+      </div>`;
+  }
+}
+
 function renderWork() {
   const sorted = [...WORK].sort((a, b) => a.date.localeCompare(b.date));
   const filtered = currentFilter === "all" ? sorted : sorted.filter(i => i.category === currentFilter);
-  const slice = filtered.slice(0, visibleCount);
   const grid = document.getElementById("work-grid");
 
-  if (!slice.length) {
-    grid.innerHTML = `<div class="work-empty">No work in this category yet.</div>`;
-  } else {
-    grid.innerHTML = slice.map(cardHTML).join("");
-  }
+  grid.innerHTML = filtered.length
+    ? filtered.slice(0, visibleCount).map(cardHTML).join("")
+    : `<div class="work-empty">No work in this category yet.</div>`;
 
   const moreWrap = document.getElementById("load-more-wrap");
   moreWrap.innerHTML = "";
@@ -142,27 +181,29 @@ function renderWork() {
   observeReveals();
 }
 
+function setFilter(key) {
+  currentFilter = key;
+  visibleCount = PAGE_SIZE;
+  document.querySelectorAll(".filter-btn").forEach(b =>
+    b.classList.toggle("active", b.getAttribute("data-filter") === key));
+  renderRoles();
+  renderWork();
+  document.getElementById("work").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 function renderFilters() {
   const bar = document.getElementById("filters");
   const counts = { all: WORK.length };
   Object.keys(CATEGORIES).forEach(k => counts[k] = WORK.filter(w => w.category === k).length);
 
-  const items = [["all", "All Work"], ...Object.entries(CATEGORIES)];
+  const items = [["all", "All Work"], ...Object.entries(CATEGORIES).map(([k, c]) => [k, c.label])];
   bar.innerHTML = items.map(([key, label]) => `
     <button class="filter-btn ${key === currentFilter ? "active" : ""}" data-filter="${key}">
-      ${label} <span style="opacity:.55">· ${counts[key]}</span>
+      ${label} <span class="count">${counts[key]}</span>
     </button>`).join("");
 
-  bar.querySelectorAll(".filter-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      currentFilter = btn.getAttribute("data-filter");
-      visibleCount = PAGE_SIZE;
-      bar.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      renderWork();
-      document.getElementById("work").scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  });
+  bar.querySelectorAll(".filter-btn").forEach(btn =>
+    btn.addEventListener("click", () => setFilter(btn.getAttribute("data-filter"))));
 }
 
 function observeReveals() {
@@ -186,11 +227,8 @@ function setupNavScroll() {
 
 function setupStatsTrigger() {
   const target = document.querySelector(".hero-stats");
-  if (!target) return;
   const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { animateCounters(); io.disconnect(); }
-    });
+    if (entries.some(e => e.isIntersecting)) { animateCounters(); io.disconnect(); }
   }, { threshold: 0.4 });
   io.observe(target);
 }
@@ -201,8 +239,10 @@ document.addEventListener("DOMContentLoaded", () => {
   renderStats();
   renderAbout();
   renderExperience();
+  renderCannes();
   renderAchievements();
   renderFilters();
+  renderRoles();
   renderWork();
   setupNavScroll();
   setupStatsTrigger();
