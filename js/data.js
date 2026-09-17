@@ -23,10 +23,10 @@ const STATS = [
 ];
 
 const HOME_ROLES = [
-  { role: "Screenwriter", line: "Films that let classrooms speak for themselves.", img: S + "film_c.jpg", anchor: "films" },
-  { role: "Executive Producer", line: "A podcast where school students sit across from leaders.", img: S + "ep_studio_2.jpg", anchor: "films" },
-  { role: "Writer & Editor", line: "Books, essays and op eds on schools and democracy.", img: S + "pub_lbct2.jpg", anchor: "books" },
-  { role: "Character Scout", line: "Finding the people a story is really about.", img: S + "moc_post.jpg", anchor: "campaigns" },
+  { role: "Impact Film", line: "Films that let classrooms speak for themselves.", img: S + "film_c.jpg", anchor: "films" },
+  { role: "Podcast", line: "School students in conversation with leaders.", img: S + "ep_studio_2.jpg", anchor: "films" },
+  { role: "Writer & Editor", line: "Books, essays and op eds on schools and democracy.", img: S + "pub_lbct2.jpg", anchor: "writing" },
+  { role: "Storytelling", line: "Finding the people a story is really about.", img: S + "moc_post.jpg", anchor: "campaigns" },
   { role: "Facilitator", line: "Forty workshops on storytelling and the Constitution.", img: S + "fac_2.jpg", anchor: "workshops" },
 ];
 
