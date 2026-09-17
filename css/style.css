@@ -242,6 +242,9 @@ a.card:hover .arrow { transform: translate(3px, -3px); }
 .tl { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 26px; }
 .tl-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 18px; margin-bottom: 18px; border-bottom: 1px solid var(--line); min-height: 64px; }
 .tl-logo { height: 46px; width: auto; max-width: 150px; object-fit: contain; }
+.tl-side { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.tl-type { font-size: .7rem; font-weight: 600; letter-spacing: .06em; padding: 4px 10px; border-radius: 100px; border: 1px solid var(--line); color: var(--ink-2); background: var(--paper); white-space: nowrap; }
+.tl-type.full { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .tl-years { white-space: nowrap; font-size: .76rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--red); }
 .tl h3 { font-size: 1.5rem; margin: 10px 0 4px; }
 .tl-org { font-weight: 600; font-size: .92rem; margin-bottom: 14px; }

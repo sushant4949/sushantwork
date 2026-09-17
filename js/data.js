@@ -161,28 +161,34 @@ const WORK = [
 ];
 
 const EXPERIENCE = [
-  { years: "2025 to now", role: "Manager, Communications", org: "Mantra4Change", logo: "assets/img/logos/mantra4change.png", points: [
+  { years: "2025 to now", role: "Manager, Communications", org: "Mantra4Change", type: "Full-time", logo: "assets/img/logos/mantra4change.png", points: [
     "Leads the communications team across Bihar, Karnataka and Uttar Pradesh",
     "Ran a statewide Brand Perception Survey that lifted the Brand Health Index by 20%",
     "Executive Producer of InvokED Studio",
     "Took Mothers of Courage to Cannes Lions 2026",
   ] },
-  { years: "2025 to now", role: "Design & Communications Consultant", org: "Language and Learning Foundation", logo: "assets/img/logos/llf.png", points: [
+  { years: "2025 to now", role: "Design & Communications Consultant", org: "Language and Learning Foundation", type: "Freelance", logo: "assets/img/logos/llf.png", points: [
     "Contributed to the 10 Year Impact Report",
     "Co-developed a teacher handbook for FLN classrooms",
   ] },
-  { years: "2024 to 2025", role: "Academic Mentor, Roshni Fellowship", org: "CREA", logo: "assets/img/logos/crea.png", points: [
+  { years: "2024 to 2025", role: "Academic Mentor, Roshni Fellowship", org: "CREA", type: "Freelance", logo: "assets/img/logos/crea.png", points: [
     "Mentored 12 fellows through a 10 month program on constitutional values",
   ] },
-  { years: "2023 to 2025", role: "Associate Manager, Communications", org: "Mantra4Change", logo: "assets/img/logos/mantra4change.png", points: [
+  { years: "2023 to 2025", role: "Associate Manager, Communications", org: "Mantra4Change", type: "Full-time", logo: "assets/img/logos/mantra4change.png", points: [
     "Built fundraising stories for Dialogue for Social Equity, USA",
     "Co-authored op eds with the founders for national media",
   ] },
-  { years: "2022 to 2023", role: "Program Communications Lead", org: "Mantra4Change", logo: "assets/img/logos/mantra4change.png", points: [
+  { years: "2022 to 2023", role: "Program Communications Lead", org: "Mantra4Change", type: "Full-time", logo: "assets/img/logos/mantra4change.png", points: [
     "Built the communications strategy from the ground up",
     "Scripted program films and ran the 10th anniversary campaign",
   ] },
-  { years: "2021 to now", role: "Co-founder", org: "Dialogues on Democracy & Development", logo: "assets/img/logos/dod.png", points: [
+  { role: "Curator & Facilitator", org: "Turtle Forum", type: "Freelance", logo: "assets/img/logos/turtle_forum.png", points: [
+    "Designed sessions on communications strategy and narrative building",
+    "Explored the culture that makes good communications possible",
+    "Made the case for why social impact communications needs to be political",
+    "Facilitated the sessions too",
+  ] },
+  { years: "2021 to now", role: "Co-founder", org: "Dialogues on Democracy & Development", type: "Freelance", logo: "assets/img/logos/dod.png", points: [
     "15 partner organisations and 40 workshops in 12 cities",
     "Produced the video series Siddhant Samvidhan Ke",
   ] },

@@ -125,7 +125,7 @@ function renderWork() {
 
   $("#timeline").innerHTML = EXPERIENCE.map(e => `
     <article class="tl reveal">
-      <div class="tl-top"><img class="tl-logo" src="${e.logo}" alt="${e.org} logo" loading="lazy"><p class="tl-years">${e.years}</p></div>
+      <div class="tl-top"><img class="tl-logo" src="${e.logo}" alt="${e.org} logo" loading="lazy"><div class="tl-side">${e.years ? `<p class="tl-years">${e.years}</p>` : ""}<span class="tl-type ${e.type === "Full-time" ? "full" : ""}">${e.type}</span></div></div>
       <h3>${e.role}</h3>
       <p class="tl-org">${e.org}</p>
       <ul>${e.points.map(p => `<li>${p}</li>`).join("")}</ul>
