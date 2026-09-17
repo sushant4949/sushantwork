@@ -16,10 +16,10 @@ const PROFILE = {
 /* ---------- HOME ---------- */
 
 const STATS = [
-  { n: 5, suffix: "+", label: "years in social impact communications" },
-  { n: 40, suffix: "", label: "workshops led" },
-  { n: 12, suffix: "", label: "cities" },
-  { n: 4000, suffix: "+", label: "people in the room" },
+  { n: 5, suffix: "+", label: "Years in social impact communications" },
+  { n: 40, suffix: "", label: "Workshops facilitated" },
+  { n: 30, suffix: "+", label: "Stories told through impact films & podcasts" },
+  { text: "∞", label: "Stories waiting to be told" },
 ];
 
 const HOME_ROLES = [

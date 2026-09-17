@@ -55,7 +55,7 @@ const byNewest = (a, b) => b.date.localeCompare(a.date);
 /* ---------- home ---------- */
 function renderHome() {
   $("#stats").innerHTML = STATS.map(s => `
-    <div class="stat reveal"><b data-count="${s.n}" data-suffix="${s.suffix}">0</b><span>${s.label}</span></div>`).join("");
+    <div class="stat reveal">${s.text ? `<b>${s.text}</b>` : `<b data-count="${s.n}" data-suffix="${s.suffix}">0</b>`}<span>${s.label}</span></div>`).join("");
 
   $("#home-roles").innerHTML = HOME_ROLES.map((r, i) => `
     <a class="role-card reveal" href="work#${r.anchor}">
