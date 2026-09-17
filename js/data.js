@@ -112,12 +112,94 @@ const SKILLS = [
   "Logical & Analytical Thinking", "Curriculum Development",
 ];
 
-/* Cannes Lions 2026 spotlight — cropped from the user's own festival photos */
-const CANNES_SPOTLIGHT = {
-  caption: "ERA Cohort 2026 — Cannes Lions International Festival of Creativity, France",
-  photos: ["assets/img/cannes_1.jpg", "assets/img/cannes_2.jpg"],
-  logo: "assets/img/cannes_logo_white.png",
+const S = "assets/img/story/";
+
+/* "Why did I get this opportunity?" — the five roles from the Cannes & France talk.
+   filter = work-archive category the role links into. */
+const ROLE_STORIES = [
+  {
+    role: "Character Scout",
+    hi: "कैरेक्टर स्काउट",
+    project: "Mothers of Courage",
+    text: "Found the mothers at the heart of Shiksha Chaupal — village conversations in Bihar that keep girls in school — and wrote the film around them. It became India's only shortlist in the SDG Lions at Cannes Lions 2026, and an ABBY Award winner.",
+    facts: ["28,000+ Chaupals", "14 districts", "800,000+ people mobilised"],
+    photos: [S + "moc_post.jpg"],
+    link: { label: "Read the press coverage", url: "https://aninews.in/news/business/indias-only-sdg-lions-shortlist-at-cannes-2026-comes-from-a-grassroots-education-movement-in-bihar20260627133645/" },
+    filter: "campaigns",
+  },
+  {
+    role: "Screenwriter",
+    hi: "पटकथा लेखक",
+    project: "Impact films",
+    text: "Scripts for program films that let classrooms speak for themselves — project-based learning in Bihar, Andhra Pradesh and Nagaland, and the transformation of district teacher-training institutes with SCERT Bihar.",
+    photos: [S + "film_c.jpg", S + "film_a.jpg", S + "film_d.jpg", S + "film_b.jpg", S + "film_e.jpg", S + "film_f.jpg"],
+    link: { label: "Watch PBL in Bihar", url: "https://www.youtube.com/watch?v=TYWevl5MmJo" },
+    filter: "films",
+  },
+  {
+    role: "Executive Producer",
+    hi: "एग्ज़ीक्यूटिव प्रोड्यूसर",
+    project: "Up Close & Personal with Gen Next · InvokED Studio",
+    text: "A video podcast where school students sit across the table from leaders in education and the social sector. Executive Producer and writer for Seasons 2 & 3.",
+    photos: [S + "ep_studio_2.jpg", S + "ep_studio_1.jpg", S + "ep_logo.jpg"],
+    link: { label: "Watch the playlist", url: "https://youtube.com/playlist?list=PLa_4M_7MRsGx-z0wIyVsszZbS2rBiNFJI&si=eehMtOk1QdTIY5CB" },
+    filter: "films",
+  },
+  {
+    role: "Writer & Editor",
+    hi: "लेखक और संपादक",
+    project: "Books of teachers' stories",
+    text: "Story collections from public-school classrooms, in English and Hindi — People Doing PBL, Learning Beyond Chalk & Talk (Vol. II), छोटे कदम, बड़े बदलाव (Vol. I) and Small Steps to Build Great Schools (Vol. II).",
+    photos: [S + "pub_people_pbl.jpg", S + "pub_lbct2.jpg", S + "pub_chhote_kadam.jpg", S + "pub_small_steps2.jpg"],
+    link: { label: "Flip through Small Steps, Vol. II", url: "https://heyzine.com/flip-book/d4afa18256.html" },
+    filter: "reports",
+  },
+  {
+    role: "Facilitator",
+    hi: "फ़ैसिलिटेटर",
+    project: "Storytelling & constitutional values",
+    text: "Workshops on storytelling and on liberty, equality and fraternity — 40 of them across 12 cities, for fellowships, universities and government departments.",
+    photos: [S + "fac_2.jpg", S + "fac_6.jpg", S + "fac_3.jpg", S + "fac_4.jpg", S + "fac_1.jpg", S + "fac_5.jpg"],
+    filter: "facilitation",
+  },
+];
+
+const CANNES = {
+  redCarpet: [S + "rc_1.jpg", S + "rc_2.jpg", S + "rc_3.jpg", S + "rc_4.jpg"],
+  stats: [
+    { n: 5, label: "days", hi: "दिन" },
+    { n: 30, label: "sessions", hi: "सत्र" },
+    { n: 80, label: "films", hi: "फ़िल्में" },
+  ],
+  sessions: [S + "ses_1.jpg", S + "ses_5.jpg", S + "ses_3.jpg", S + "ses_2.jpg", S + "ses_4.jpg"],
+  friends: [S + "fr_1.jpg", S + "fr_5.jpg", S + "fr_3.jpg", S + "fr_4.jpg", S + "fr_2.jpg"],
+  scholarships: [
+    { name: "The Equity, Representation & Accessibility (ERA) Programme", note: "The one I was selected for" },
+    { name: "The Jodi Harris Scholarship" },
+    { name: "See It Be It" },
+    { name: "The LIONS Scholarship" },
+  ],
 };
+
+/* Civic observations from the France half of the talk. hi = the slide's own line. */
+const FRANCE_NOTES = [
+  { img: S + "fr_walk.jpg", title: "Pedestrians come first", hi: "पहली प्राथमिकता पैदल चलने वालों को" },
+  { img: S + "fr_cycle.jpg", title: "Cyclists come second", hi: "दूसरी प्राथमिकता साइकिल चलाने वालों को" },
+  { img: S + "fr_tram.jpg", title: "Public transport comes third", hi: "तीसरी प्राथमिकता पब्लिक ट्रांसपोर्ट को" },
+  { img: S + "fr_boat.jpg", title: "15 days, 4 cities — a cab only once", hi: "15 दिन, 4 शहर, केवल एक बार कैब" },
+  { img: S + "fr_118km.jpg", title: "118 km on foot", hi: "15 दिन 118 किलोमीटर पैदल" },
+  { img: S + "fr_fountain.jpg", title: "Thirsty? Refill wherever there's public water", hi: "जहाँ सार्वजनिक पानी दिखे, वहीं भरिए और पीजिए" },
+  { text: "Low-emission zones are mandatory in every city of 150,000+ people, under climate and air-quality law.", title: "Strict rules for clean air", hi: "स्वच्छ हवा के लिए सख़्त नियम" },
+  { img: S + "fr_books.jpg", title: "Read, return — or leave a book behind", hi: "पढ़िए, लौटाइए या अपनी किताब छोड़ जाइए" },
+  { img: S + "fr_chess.jpg", title: "Third spaces, everywhere", hi: "3rd Space" },
+  { img: S + "fr_canal.jpg", title: "Clean drains", hi: "साफ़ नाले" },
+  { img: S + "fr_rhone.jpg", title: "Clean rivers", hi: "साफ़ नदी", detail: "Polluting a river is a criminal offence — fines up to €75,000 and up to 2 years in jail." },
+  { text: "Neither the market nor the government can take it without your permission.", title: "Your data is yours", hi: "आपका डेटा आपका है" },
+  { img: S + "fr_smallcar.jpg", title: "Small vehicles, equally safe on the road", hi: "छोटे वाहन भी सड़कों पर बराबर सुरक्षित" },
+  { img: S + "fr_streets.jpg", title: "No billboard jungle", hi: "होर्डिंग, बैनर और बाहरी विज्ञापनों पर सख़्त नियम", detail: "Size, number, placement and lighting of outdoor ads are regulated by law." },
+];
+
+const POPULATION = { france: "6.9 crore", bihar: "13.06 crore" };
 
 /* category keys used for filtering — roles are the exact "capacity engaged in"
    lines from the work-portfolio index, one per category. */
@@ -218,8 +300,13 @@ const WORK = [
   // 2025
   { date: "2025-02", category: "websites", title: "Dialogues on Democracy & Development", org: "new dedicated website", url: "https://www.dialoguesondemocracy.org/" },
   { date: "2025-03", category: "articles", title: "Can Democracy Education Help Instill 'Constitutional Morality'?", org: "Dialogues on Democracy & Development · Case Study", url: "https://www.dialoguesondemocracy.org/blog/dXunHtYVY68juq46pUfM" },
-  { date: "2025-04", category: "films", title: "Up Close & Personal — Seasons 2 & 3", org: "InvokED Studio · Executive Producer & Writer", url: "https://youtube.com/playlist?list=PLa_4M_7MRsGx-z0wIyVsszZbS2rBiNFJI&si=eehMtOk1QdTIY5CB", img: "assets/img/thumbs/36de93c740.jpg" },
+  { date: "2025-04", category: "films", title: "Up Close & Personal with Gen Next — Seasons 2 & 3", org: "InvokED Studio · Executive Producer & Writer", url: "https://youtube.com/playlist?list=PLa_4M_7MRsGx-z0wIyVsszZbS2rBiNFJI&si=eehMtOk1QdTIY5CB", img: "assets/img/thumbs/36de93c740.jpg" },
   { date: "2025-06", category: "blogs", title: "A Female Bus Conductor Making Education Accessible for Children", org: "Shikshagraha", url: "https://shikshagraha.org/uncategorized/a-movement-is-truly-a-movement-when-everyone-finds-a-way-to-join/", img: "assets/img/thumbs/a54e0fe82a.jpg" },
   { date: "2025-07", category: "articles", title: "Is the NCERT Textbook Rationalization Rational?", org: "Dialogues on Democracy & Development", url: "https://www.instagram.com/p/DMkINsBSPUV/?img_index=1", img: "assets/img/thumbs/b6132374f5.jpg" },
+  { date: "2025-09", approx: true, category: "reports", title: "People Doing PBL — Stories of Project-Based Learning Champions", org: "Mantra4Change × Education Above All · Writer & Editor", img: S + "pub_people_pbl.jpg" },
+  { date: "2025-09", approx: true, category: "reports", title: "Learning Beyond Chalk & Talk — Volume II", org: "Mantra4Change · Writer & Editor", img: S + "pub_lbct2.jpg" },
+  { date: "2025-09", approx: true, category: "reports", title: "छोटे कदम, बड़े बदलाव — Volume I", org: "Stories of education leaders · Writer & Editor", img: S + "pub_chhote_kadam.jpg" },
+  { date: "2025-09", approx: true, category: "reports", title: "Small Steps to Build Great Schools — Volume II", org: "Mantra4Change · Writer & Editor", url: "https://heyzine.com/flip-book/d4afa18256.html", img: S + "pub_small_steps2.jpg" },
+  { date: "2026-06", category: "campaigns", title: "Mothers of Courage — Shifting Societal Norms, One Conversation at a Time", org: "Shiksha Chaupal · India's only SDG Lions shortlist, Cannes Lions 2026", url: "https://aninews.in/news/business/indias-only-sdg-lions-shortlist-at-cannes-2026-comes-from-a-grassroots-education-movement-in-bihar20260627133645/", img: S + "moc_post.jpg", featured: true },
   { date: "2025-08", category: "articles", title: "Research: Is RSS an NGO?", org: "Dialogues on Democracy & Development", url: "https://www.instagram.com/p/DSSRUoekkWA/?img_index=1", img: "assets/img/thumbs/caee5dab6d.jpg" },
 ];

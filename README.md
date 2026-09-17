@@ -15,7 +15,7 @@ file to add, remove, or re-date work items.
 ```
 index.html          page shell
 css/style.css        styling
-js/data.js            all content (profile, experience, education, work items)
+js/data.js            all content: profile, role stories, Cannes chapter, France notes, work archive
 js/main.js            rendering + interactions
 assets/                images, cropped photos and thumbnails
 ```

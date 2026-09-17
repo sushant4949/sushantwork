@@ -3,130 +3,219 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sushant Kumar — Social Impact Communications & Storytelling</title>
-<meta name="description" content="Portfolio of Sushant Kumar — social impact communications, storytelling, podcast production and fundraising communications. 2020–present.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✍️</text></svg>">
+<title>Sushant Kumar — Stories from the classroom to Cannes</title>
+<meta name="description" content="Sushant Kumar — writer, producer and facilitator in social-impact communications. From public classrooms in Bihar to the ERA Cohort at Cannes Lions 2026.">
+<meta property="og:title" content="Sushant Kumar — Stories from the classroom to Cannes">
+<meta property="og:image" content="assets/img/story/rc_1.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%23d4002f%22/><text x=%2250%22 y=%2268%22 font-size=%2256%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22Georgia%22 font-style=%22italic%22>S</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&family=Mukta:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="glow"></div>
+
+<div class="progress" id="progress"></div>
 
 <header class="nav" id="site-nav">
   <div class="nav-inner">
-    <a class="brand" href="#top">Sushant <span>Kumar</span></a>
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
+    <a class="brand" href="#top">Sushant<span>.</span></a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#roles">Roles</a>
+      <a href="#cannes">Cannes</a>
+      <a href="#france">France</a>
       <a href="#work">Work</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
     </nav>
     <a class="nav-cta" data-email href="#">Let's talk</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span></button>
   </div>
 </header>
 
 <main id="top">
+
   <!-- HERO -->
-  <section class="hero wrap hero-grid">
-    <div>
-      <div class="hero-kicker"><span class="dot-live"></span> Open to new collaborations · Bengaluru, India</div>
-      <h1 id="hero-name">Sushant Kumar</h1>
-      <p class="lead" id="hero-summary">Loading…</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#work">View the work ↓</a>
-        <a class="btn btn-ghost" data-linktree href="#" target="_blank" rel="noopener">All links (Linktree)</a>
-        <a class="btn btn-ghost" data-email href="#">Say hello</a>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="kicker">Writer · Producer · Facilitator</p>
+        <h1>Stories from India's public classrooms, <em>all the way to Cannes.</em></h1>
+        <p class="lead" id="hero-summary"></p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#roles">See how I got there</a>
+          <a class="btn btn-line" href="#work">Browse all work</a>
+        </div>
       </div>
-      <div class="hero-stats" id="hero-stats"></div>
+      <div class="hero-stack" id="hero-stack">
+        <figure class="stack-photo s1"><img src="assets/img/story/rc_2.jpg" alt="Sushant on the red carpet outside the Palais, Cannes Lions 2026"></figure>
+        <figure class="stack-photo s2"><img src="assets/img/story/rc_1.jpg" alt="Sushant on the Awards Show steps at Cannes Lions 2026"></figure>
+        <figure class="stack-photo s3"><img src="assets/img/story/rc_3.jpg" alt="Sushant seated on the red-carpet steps at Cannes Lions 2026"></figure>
+        <a class="stack-badge" href="#cannes">
+          <img src="assets/img/cannes_logo_dark.png" alt="Cannes Lions">
+          <span>ERA Cohort<b>2026</b></span>
+        </a>
+      </div>
     </div>
-    <div class="hero-portrait reveal">
-      <div class="portrait-frame">
-        <img id="hero-photo" src="" alt="Sushant Kumar">
+    <div class="hero-stats wrap" id="hero-stats"></div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee"></div>
+  </div>
+
+  <!-- ROLES -->
+  <section id="roles" class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Why did I get this opportunity? <span class="hi">मुझे यह अवसर क्यों मिला?</span></p>
+        <h2>Five roles behind <em>one red carpet.</em></h2>
+        <p>Cannes didn't come from a single campaign. It came from years of work in five capacities — each one below links straight into the archive.</p>
       </div>
-      <a class="portrait-badge" href="#achievements">
-        <img src="assets/img/cannes_logo_white.png" alt="Cannes Lions">
-        <span><b>ERA Cohort 2026</b>Mothers of Courage</span>
-      </a>
+      <div id="role-stories"></div>
+    </div>
+  </section>
+
+  <!-- CANNES -->
+  <section id="cannes" class="section chapter-dark">
+    <div class="wrap">
+      <div class="cannes-head reveal">
+        <img class="cannes-mark" src="assets/img/cannes_logo_white.png" alt="Cannes Lions — International Festival of Creativity">
+        <div>
+          <p class="eyebrow light">June 2026 · Cannes, France</p>
+          <h2>A red-carpet moment <em>to remember.</em></h2>
+          <p class="hi-line">मेरे लिए एक यादगार रेड कार्पेट पल</p>
+          <p class="muted">Not the film festival — its sibling. Cannes Lions is the world's festival of advertising, creativity and branding, and I was there with the Equity, Representation & Accessibility (ERA) cohort.</p>
+        </div>
+      </div>
+
+      <div class="carpet reveal" id="red-carpet"></div>
+
+      <div class="cannes-stats reveal" id="cannes-stats"></div>
+
+      <div class="cannes-split">
+        <div class="reveal">
+          <h3>What I did at Cannes</h3>
+          <p class="hi-line small">मैंने कान्स में क्या किया?</p>
+          <p class="muted">Forum stages, screenings and workshops — a week of watching how the world's best work gets made, and bringing a grassroots Bihar story into that room.</p>
+          <div class="mosaic" id="sessions"></div>
+        </div>
+        <div class="reveal">
+          <h3>A lot of new friends</h3>
+          <p class="hi-line small">कई सारे नए दोस्त</p>
+          <div class="mosaic friends" id="friends"></div>
+        </div>
+      </div>
+
+      <div class="apply reveal">
+        <div>
+          <p class="eyebrow light">Work in this sector? Here's how you can get there</p>
+          <h3>Apply in <em>October – November.</em></h3>
+          <p class="hi-line small">अगर आप भी इस क्षेत्र में काम करते हैं, तो कान्स कैसे पहुँच सकते हैं?</p>
+        </div>
+        <ul class="scholarships" id="scholarships"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRANCE -->
+  <section id="france" class="section">
+    <div class="wrap">
+      <div class="france-head reveal">
+        <div>
+          <p class="eyebrow">Notes from France <span class="hi">फ्रांस के कुछ अनोखे अनुभव</span></p>
+          <h2>What a democracy <em>looks like on the street.</em></h2>
+        </div>
+        <p>Fifteen days, four cities, mostly on foot. What stayed with me were the small civic rules that quietly shape daily life — the same questions of liberty, equality and fraternity I take into workshops back home.</p>
+      </div>
+    </div>
+    <div class="strip-wrap reveal">
+      <div class="strip" id="france-strip"></div>
+      <div class="wrap strip-controls">
+        <div class="strip-bar"><span id="strip-bar"></span></div>
+        <button class="round" id="strip-prev" aria-label="Previous">←</button>
+        <button class="round" id="strip-next" aria-label="Next">→</button>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="population reveal" id="population"></div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="section section-paper">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">The archive · 2020 — 2026</p>
+        <h2>Every piece, <em>in the order it happened.</em></h2>
+        <p>Nine kinds of work, each with the capacity I worked in. Pick a category to see its roles — every card opens the original.</p>
+      </div>
+      <div class="filters" id="filters"></div>
+      <div class="roles-panel" id="roles-panel"></div>
+      <div class="work-grid" id="work-grid"></div>
+      <div class="load-more-wrap" id="load-more-wrap"></div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">About</div>
-      <h2>Narratives that move policy, partnerships & people.</h2>
-    </div>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p id="about-summary"></p>
-        <p>Across five years I've worked as a writer, editor, producer and designer — building brand-perception surveys, donor collateral, video podcasts, constitutional-literacy curricula and 40+ live workshops across 12 Indian cities. The through-line is always the same: take something complicated and make it something people act on.</p>
-        <div class="skills-cloud" id="skills-cloud"></div>
+  <section id="about" class="section">
+    <div class="wrap about-grid">
+      <div class="about-portrait reveal">
+        <img src="assets/img/profile.jpg" alt="Portrait of Sushant Kumar">
+        <div class="skills" id="skills"></div>
       </div>
-      <div class="reveal">
-        <div class="eyebrow" style="margin-bottom:24px">Education</div>
-        <div class="edu-list" id="edu-list"></div>
+      <div class="about-body">
+        <div class="section-head reveal">
+          <p class="eyebrow">About</p>
+          <h2>From Sainik School Nalanda to <em>social-impact storytelling.</em></h2>
+          <p id="about-summary"></p>
+        </div>
+        <h3 class="sub reveal">Experience</h3>
+        <div class="timeline" id="timeline"></div>
+        <h3 class="sub reveal">Education</h3>
+        <div class="edu" id="edu-list"></div>
       </div>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">Experience</div>
-      <h2>Where the work has lived.</h2>
-      <p>Six roles, one throughline — building communications functions from the ground up for education and civic-literacy organisations.</p>
+  <!-- RECOGNITION -->
+  <section id="achievements" class="section section-paper">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Recognition</p>
+        <h2>Achievements <em>& fellowships.</em></h2>
+      </div>
+      <ol class="ach-list" id="ach-list"></ol>
     </div>
-    <div class="timeline" id="timeline"></div>
-  </section>
-
-  <!-- WORK -->
-  <section id="work" class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">Work · 2020 — Present</div>
-      <h2>A chronological archive.</h2>
-      <p>Nine kinds of work, each with the capacity I worked in. Pick a category to see its roles and projects — every card links to the original source.</p>
-    </div>
-    <div class="filters" id="filters"></div>
-    <div class="roles-panel" id="roles-panel"></div>
-    <div class="work-grid" id="work-grid"></div>
-    <div class="load-more-wrap" id="load-more-wrap"></div>
-  </section>
-
-  <!-- ACHIEVEMENTS -->
-  <section id="achievements" class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">Recognition</div>
-      <h2>Achievements & fellowships.</h2>
-    </div>
-    <div class="cannes reveal" id="cannes-spotlight"></div>
-    <div class="ach-grid" id="ach-grid"></div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="wrap">
-    <div class="contact-card reveal">
-      <h2>Let's build the next story.</h2>
-      <p>Open to communications leadership roles, fundraising storytelling engagements and constitutional-literacy collaborations.</p>
+  <section id="contact" class="section chapter-red">
+    <div class="wrap contact reveal">
+      <p class="trilingual">Liberté. Égalité. Fraternité.</p>
+      <h2>Let's build <em>the next story.</em></h2>
+      <p>Open to communications leadership roles, fundraising storytelling and constitutional-literacy collaborations.</p>
       <div class="contact-actions">
-        <a class="btn btn-primary" data-email href="#">kumarsushant494@gmail.com</a>
-        <a class="btn btn-ghost" data-linkedin href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
-      </div>
-      <div class="contact-links">
-        <a data-linktree href="#" target="_blank" rel="noopener">Linktree — all links</a>
-        <a href="tel:+918318668335">+91 83186 68335</a>
+        <a class="btn btn-white" data-email href="#">kumarsushant494@gmail.com</a>
+        <a class="btn btn-ghost-white" data-linkedin href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn btn-ghost-white" data-linktree href="#" target="_blank" rel="noopener">Linktree ↗</a>
       </div>
     </div>
   </section>
 </main>
 
-<footer>
+<footer class="footer">
   <div class="wrap">
-    <span id="brand-name">Sushant</span> Kumar © <span id="year"></span>
+    <span>Sushant Kumar © <span id="year"></span></span>
+    <a href="#top">Back to top ↑</a>
   </div>
 </footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" id="lb-close" aria-label="Close">×</button>
+  <button class="lb-nav lb-prev" id="lb-prev" aria-label="Previous">←</button>
+  <figure><img id="lb-img" src="" alt=""><figcaption id="lb-cap"></figcaption></figure>
+  <button class="lb-nav lb-next" id="lb-next" aria-label="Next">→</button>
+</div>
 
 <script src="js/data.js"></script>
 <script src="js/main.js"></script>
