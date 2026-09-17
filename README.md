@@ -13,12 +13,17 @@ file to add, remove, or re-date work items.
 ## Structure
 
 ```
-index.html          page shell
-css/style.css        styling
-js/data.js            all content: profile, role stories, Cannes chapter, France notes, work archive
-js/main.js            rendering + interactions
-assets/                images, cropped photos and thumbnails
+index.html           Home
+education.html       Education and achievements
+work.html            All work, grouped by type
+css/style.css        styling shared by every page
+js/data.js           all content (edit this to add or remove work)
+js/main.js           renders each page
+assets/img/          photos and thumbnails
 ```
+
+Internal links use clean URLs (`/work`, `/education`), which GitHub Pages
+resolves to the `.html` files.
 
 ## Run locally
 
