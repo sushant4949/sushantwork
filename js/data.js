@@ -64,6 +64,8 @@ const EDUCATION = [
     degree: "Bachelor of Education",
     years: "2023 to 2025",
     score: "73%",
+    logo: "assets/img/logos/mdu.png",
+    story: "Took up the B.Ed. while working full-time, out of a genuine desire to learn how to teach.",
   },
   {
     school: "Azim Premji University",
@@ -71,6 +73,7 @@ const EDUCATION = [
     degree: "M.A. Education",
     years: "2020 to 2022",
     score: "8.3 / 10 CGPA",
+    logo: "assets/img/logos/apu.png",
     note: { text: "Featured by the alumni network for building Dialogues on Democracy & Development", url: "https://alumni.azimpremjiuniversity.edu.in/f/fostering-dialogues-a-pathway-to-strengthen-democracy-in-india-sushant-kumar-ma-education-2020-22-24045?source=view" },
   },
   {
@@ -79,6 +82,7 @@ const EDUCATION = [
     degree: "B.A. (Hons.) Political Science",
     years: "2017 to 2020",
     score: "80.45%",
+    logo: "assets/img/logos/bhu.png",
   },
   {
     school: "Sainik School Nalanda",
@@ -86,6 +90,7 @@ const EDUCATION = [
     degree: "High School, Physics, Chemistry and Mathematics",
     years: "2009 to 2016",
     score: "72.05%",
+    logo: "assets/img/logos/sainik_nalanda.png",
   },
 ];
 

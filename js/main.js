@@ -83,14 +83,15 @@ function renderHome() {
 function renderEducation() {
   $("#degrees").innerHTML = EDUCATION.map(e => `
     <article class="degree reveal">
-      <div class="degree-years">${e.years}</div>
+      <div class="degree-logo"><img src="${e.logo}" alt="${e.school} logo" loading="lazy"></div>
       <div>
+        <p class="degree-years">${e.years}</p>
         <h2>${e.school}</h2>
-        <p class="degree-place">${e.place}</p>
         <p class="degree-name">${e.degree}</p>
+        ${e.story ? `<p class="degree-story">${e.story}</p>` : ""}
         ${e.note ? `<a class="text-link degree-note" href="${e.note.url}" target="_blank" rel="noopener">${e.note.text} ↗</a>` : ""}
+        <p class="degree-meta">${e.place}<span>·</span>${e.score}</p>
       </div>
-      <div class="degree-score">${e.score}</div>
     </article>`).join("");
 
   $("#achievements").innerHTML = ACHIEVEMENTS.map(a => `
