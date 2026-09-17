@@ -161,6 +161,12 @@ const WORK = [
 ];
 
 const EXPERIENCE = [
+  { years: "2026 to now", role: "Curator & Facilitator", org: "Turtle Forum", type: "Freelance", logo: "assets/img/logos/turtle_forum.png", points: [
+    "Designed sessions on communications strategy and narrative building",
+    "Explored the culture that makes good communications possible",
+    "Made the case for why social impact communications needs to be political",
+    "Facilitated the sessions too",
+  ] },
   { years: "2025 to now", role: "Manager, Communications", org: "Mantra4Change", type: "Full-time", logo: "assets/img/logos/mantra4change.png", points: [
     "Leads the communications team across Bihar, Karnataka and Uttar Pradesh",
     "Ran a statewide Brand Perception Survey that lifted the Brand Health Index by 20%",
@@ -181,12 +187,6 @@ const EXPERIENCE = [
   { years: "2022 to 2023", role: "Program Communications Lead", org: "Mantra4Change", type: "Full-time", logo: "assets/img/logos/mantra4change.png", points: [
     "Built the communications strategy from the ground up",
     "Scripted program films and ran the 10th anniversary campaign",
-  ] },
-  { role: "Curator & Facilitator", org: "Turtle Forum", type: "Freelance", logo: "assets/img/logos/turtle_forum.png", points: [
-    "Designed sessions on communications strategy and narrative building",
-    "Explored the culture that makes good communications possible",
-    "Made the case for why social impact communications needs to be political",
-    "Facilitated the sessions too",
   ] },
   { years: "2021 to now", role: "Co-founder", org: "Dialogues on Democracy & Development", type: "Freelance", logo: "assets/img/logos/dod.png", points: [
     "15 partner organisations and 40 workshops in 12 cities",
