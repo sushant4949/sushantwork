@@ -236,7 +236,9 @@ a.card:hover .arrow { transform: translate(3px, -3px); }
 
 .timeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .tl { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 26px; }
-.tl-years { font-size: .76rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--red); }
+.tl-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 18px; margin-bottom: 18px; border-bottom: 1px solid var(--line); min-height: 64px; }
+.tl-logo { height: 46px; width: auto; max-width: 150px; object-fit: contain; }
+.tl-years { white-space: nowrap; font-size: .76rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--red); }
 .tl h3 { font-size: 1.5rem; margin: 10px 0 4px; }
 .tl-org { font-weight: 600; font-size: .92rem; margin-bottom: 14px; }
 .tl ul { margin: 0; padding-left: 18px; color: var(--ink-2); font-size: .9rem; }
