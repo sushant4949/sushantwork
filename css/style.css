@@ -241,6 +241,8 @@ a.card:hover .arrow { transform: translate(3px, -3px); }
 .timeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .tl { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 26px; }
 .tl-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 18px; margin-bottom: 18px; border-bottom: 1px solid var(--line); min-height: 64px; }
+.tl-logo-link { display: inline-flex; border-radius: 8px; transition: transform .3s var(--ease), opacity .2s; }
+.tl-logo-link:hover { transform: scale(1.06); opacity: .85; }
 .tl-logo { height: 46px; width: auto; max-width: 150px; object-fit: contain; }
 .tl-side { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
 .tl-type { font-size: .7rem; font-weight: 600; letter-spacing: .06em; padding: 4px 10px; border-radius: 100px; border: 1px solid var(--line); color: var(--ink-2); background: var(--paper); white-space: nowrap; }
