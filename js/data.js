@@ -8,6 +8,7 @@ const PROFILE = {
   email: "kumarsushant494@gmail.com",
   phone: "+91 83186 68335",
   linkedin: "https://www.linkedin.com/in/sushantkumar494/",
+  website: "https://sushant4949.github.io/sushantwork/",
   portfolio: "https://drive.google.com/drive/folders/1iDiWkDljhmhKN8HVlShESBBqA675HYbx?usp=drive_link",
   photo: "assets/img/profile.jpg",
 };
