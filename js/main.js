@@ -109,12 +109,12 @@ function renderEducation() {
 function renderWork() {
   const groups = Object.entries(CATEGORIES).map(([key, c]) => ({ key, ...c, items: WORK.filter(w => w.category === key).sort(byNewest) }));
 
-  $("#jump-bar").innerHTML = groups.map(g => `<a href="#${g.key}">${g.label}<span>${g.items.length}</span></a>`).join("");
+  $("#jump-bar").innerHTML = groups.map(g => `<a href="#${g.key}">${g.label}</a>`).join("");
 
   $("#work-sections").innerHTML = groups.map(g => `
     <section class="work-section wrap" id="${g.key}">
       <div class="ws-head reveal">
-        <h2>${g.label}<small>${g.items.length}</small></h2>
+        <h2>${g.label}</h2>
         <div class="ws-roles">
           <span class="label">My role</span>
           <div class="chips">${g.roles.split(", ").map(r => `<span>${r}</span>`).join("")}</div>
