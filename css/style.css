@@ -173,7 +173,6 @@ a.card:hover .arrow { transform: translate(3px, -3px); }
 .tile:hover { border-color: var(--red); transform: translateY(-3px); }
 .tile span { display: block; font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
 .tile p { font-family: var(--serif); font-size: 1.1rem; line-height: 1.4; }
-.tile p b { font-weight: 600; }
 .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
 .skills span { font-size: .84rem; border: 1px solid var(--ink-3); padding: 6px 14px; border-radius: 100px; }
 
@@ -200,10 +199,10 @@ a.card:hover .arrow { transform: translate(3px, -3px); }
 .ach-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .ach { background: #fff; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); display: flex; flex-direction: column; transition: transform .35s var(--ease); }
 .ach:hover { transform: translateY(-5px); }
-.ach.big { grid-column: span 2; }
+.ach.big { grid-column: span 2; grid-row: span 2; }
 .ach-img { aspect-ratio: 4/3; overflow: hidden; }
-.ach.big .ach-img { aspect-ratio: 16/9; }
-.ach.big .ach-img img { object-position: center 30%; }
+.ach-collage { flex: 1; min-height: 340px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; overflow: hidden; }
+.ach-collage img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
 .ach-img img { width: 100%; height: 100%; object-fit: cover; }
 .ach-body { padding: 24px; }
 .ach-year { font-size: .74rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
@@ -294,6 +293,7 @@ a.card:hover .arrow { transform: translate(3px, -3px); }
   .card-grid { grid-template-columns: repeat(2, 1fr); }
   .card.featured { grid-column: span 2; }
   .ach-grid { grid-template-columns: repeat(2, 1fr); }
+  .ach.big { grid-row: auto; }
   .work-section { padding-top: 70px; }
   .degree { grid-template-columns: 90px 1fr; gap: 24px; }
   .degree-logo { width: 90px; height: 90px; padding: 12px; border-radius: 18px; }
@@ -321,5 +321,6 @@ a.card:hover .arrow { transform: translate(3px, -3px); }
   .degree { grid-template-columns: 1fr; gap: 16px; }
   .degree-logo { width: 72px; height: 72px; padding: 10px; border-radius: 16px; }
   .ach.big { grid-column: auto; }
+  .ach-collage { min-height: 300px; }
   .foot-links { gap: 14px; flex-wrap: wrap; }
 }

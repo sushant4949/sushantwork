@@ -94,8 +94,9 @@ function renderEducation() {
     </article>`).join("");
 
   $("#achievements").innerHTML = ACHIEVEMENTS.map(a => `
-    <article class="ach reveal ${a.img ? "big" : ""}">
-      ${a.img ? `<div class="ach-img"><img src="${a.img}" alt="" loading="lazy"></div>` : ""}
+    <article class="ach reveal ${a.photos ? "big" : ""}">
+      ${a.photos ? `<div class="ach-collage">${a.photos.map(p => `<img src="${p}" alt="" loading="lazy">`).join("")}</div>` : ""}
+      ${a.img ? `<div class="ach-img"><img src="${a.img}" alt="" loading="lazy" onerror="this.parentNode.remove()"></div>` : ""}
       <div class="ach-body">
         ${a.year ? `<p class="ach-year">${a.year}</p>` : ""}
         <h3>${a.title}</h3>

@@ -37,9 +37,9 @@ const CANNES = {
 };
 
 const ABOUT_TILES = [
-  { label: "Right now", value: "I work as a storyteller and lead a creative team at <b>Mantra4Change</b>, a Bengaluru based nonprofit." },
-  { label: "On the side", value: "I design and facilitate sessions at Turtle Forum, bringing development practitioners together to think, question and learn." },
-  { label: "Since 2021", value: "I create spaces for dialogue on liberty, equality, fraternity and justice through a collective I co-founded during my postgrad." },
+  { label: "Right now", value: "I work as a storyteller and lead a creative team at Mantra4Change, a Bengaluru based nonprofit." },
+  { label: "On the side", value: "I design and facilitate sessions at Turtle Forum, bringing development practitioners together to rethink nonprofit communications." },
+  { label: "Since 2021", value: "I create spaces for dialogue on constitutional values through a collective I co-founded during my postgrad." },
   { label: "Based in", value: "Bengaluru, Karnataka, with frequent visits to Muzaffarpur and Patna, Bihar." },
   { label: "Cares about", value: "Friends, family and making the world a little more equal, just and fraternal." },
   { label: "Studied", value: "Education at Azim Premji University, Political Science at BHU, and later a BEd from MDU." },
@@ -90,12 +90,11 @@ const EDUCATION = [
 ];
 
 const ACHIEVEMENTS = [
-  { year: "2026", title: "ERA Cohort, Cannes Lions", text: "Selected for the Equity, Representation and Accessibility cohort at the International Festival of Creativity in France.", img: S + "rc_1.jpg" },
-  { title: "ABBY Award", text: "Award winning writer for the film Mothers of Courage.", img: S + "moc_post.jpg" },
-  { year: "2024 to 2025", title: "RASTA Fellow", text: "Fellowship for promoting constitutional literacy." },
-  { title: "Alumni Incubator Accelerator", text: "Selected by Azim Premji University." },
-  { title: "National Conference paper", text: "“Can Constitutional Morality lead to improved civic engagement?” selected for the National Conference at Kerala University." },
-  { title: "Invited panellist", text: "Constitutional Values and Community Engagement, hosted by CREA." },
+  { year: "2026", title: "ERA Cohort, Cannes Lions", text: "Selected for the Equity, Representation and Accessibility cohort at the International Festival of Creativity in France.", photos: [S + "rc_1.jpg", S + "rc_3.jpg", S + "rc_2.jpg"] },
+  { year: "2024 to 2025", title: "RASTA Fellow", text: "Fellowship for promoting constitutional literacy.", img: S + "ach_rasta.jpg" },
+  { title: "Alumni Incubator Accelerator", text: "Selected by Azim Premji University.", img: S + "ach_incubator.jpg" },
+  { title: "National Conference paper", text: "“Can Constitutional Morality lead to improved civic engagement?” selected for the National Conference at Kerala University.", img: S + "ach_conference.jpg" },
+  { title: "Invited panellist", text: "Constitutional Values and Community Engagement, hosted by CREA.", img: S + "ach_panel.jpg" },
 ];
 
 /* ---------- WORK ---------- */
