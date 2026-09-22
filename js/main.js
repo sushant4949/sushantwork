@@ -12,7 +12,6 @@ const fmtDate = d => {
 function fillShared() {
   $$("[data-email]").forEach(el => el.href = `mailto:${PROFILE.email}`);
   $$("[data-linkedin]").forEach(el => el.href = PROFILE.linkedin);
-  $$("[data-linktree]").forEach(el => el.href = PROFILE.linktree);
   $$("[data-portfolio]").forEach(el => el.href = PROFILE.portfolio);
   $$("[data-photo]").forEach(el => el.src = PROFILE.photo);
   $$("[data-year]").forEach(el => el.textContent = new Date().getFullYear());
