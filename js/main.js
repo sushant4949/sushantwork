@@ -66,7 +66,6 @@ function renderHome() {
       <span class="go">See the work →</span>
     </a>`).join("");
 
-  $("#cannes-stats").innerHTML = CANNES.stats.map(s => `<div><b data-count="${s.n}">0</b><span>${s.label}</span></div>`).join("");
   $("#press-link").href = CANNES.pressUrl;
   $("#cannes-collage").innerHTML =
     CANNES.photos.map(p => `<figure class="tall"><img src="${p}" alt="Sushant Kumar on the red carpet at Cannes Lions 2026" loading="lazy"></figure>`).join("") +

@@ -33,11 +33,6 @@ const HOME_ROLES = [
 const CANNES = {
   photos: [S + "rc_1.jpg", S + "rc_3.jpg", S + "rc_2.jpg", S + "rc_4.jpg"],
   moments: [S + "ses_1.jpg", S + "fr_1.jpg"],
-  stats: [
-    { n: 5, label: "days" },
-    { n: 30, label: "sessions" },
-    { n: 80, label: "films" },
-  ],
   pressUrl: "https://aninews.in/news/business/indias-only-sdg-lions-shortlist-at-cannes-2026-comes-from-a-grassroots-education-movement-in-bihar20260627133645/",
 };
 
