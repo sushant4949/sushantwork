@@ -155,10 +155,10 @@ const WORK = [
 
 const EXPERIENCE = [
   { years: "2026 to now", role: "Curator & Facilitator", site: "https://turtleforum.org/", org: "Turtle Forum", type: "Freelance", logo: "assets/img/logos/turtle_forum.png", points: [
-    "Designed sessions on communications strategy and narrative building",
-    "Explored the culture that makes good communications possible",
-    "Made the case for why social impact communications needs to be political",
-    "Facilitated the sessions too",
+    "Designed sessions on communications strategy and narrative building for nonprofit teams and diverse audiences",
+    "Explored the culture that makes good communications possible through reflection and honest conversations",
+    "Made the case for why social impact communications needs to be political by examining power, representation, and voice",
+    "Facilitated the sessions too with practitioners across sectors",
   ] },
   { years: "Apr 2025 to now", role: "Manager, Communications", site: "https://www.mantra4change.org/", org: "Mantra4Change", type: "Full-time", logo: "assets/img/logos/mantra4change.png", points: [
     "Lead and mentor the communications team, strengthening storytelling and program visibility across Bihar, Karnataka, and Uttar Pradesh.",
