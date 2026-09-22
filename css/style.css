@@ -115,7 +115,7 @@ p { margin: 0; }
 .role-card .num { position: absolute; top: 16px; left: 18px; font-family: var(--serif); font-style: italic; font-size: .95rem; opacity: .85; }
 .role-card h3 { font-size: 1.55rem; margin-bottom: 8px; }
 .role-card p { font-size: .86rem; line-height: 1.45; opacity: .85; max-height: 0; overflow: hidden; transition: max-height .5s var(--ease), margin .5s; }
-.role-card:hover p, .role-card:focus p { max-height: 90px; margin-bottom: 8px; }
+.role-card:hover p, .role-card:focus p { max-height: 130px; margin-bottom: 8px; }
 .role-card .go { font-size: .8rem; font-weight: 600; color: var(--rose); }
 
 /* highlight */

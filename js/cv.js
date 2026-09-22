@@ -24,15 +24,28 @@ $("#cv-skills").innerHTML = SKILLS.map(s => `<li>${s}</li>`).join("");
 
 $("#cv-stats").innerHTML = STATS.filter(s => !s.text).map(s => `<li><b>${s.n}${s.suffix}</b>${s.label}</li>`).join("");
 
-$("#cv-roles").innerHTML = EXPERIENCE.map(e => `
+const job = e => `
   <article class="cv-job">
-    <div class="cv-job-top">
-      <h3>${e.role}</h3>
-      <span class="cv-when">${e.years}</span>
-    </div>
-    <p class="cv-org">${e.org} <span>· ${e.type}</span></p>
+    <header class="cv-job-head">
+      <a class="cv-logo" href="${e.site}" aria-label="${e.org} website"><img src="${e.logo}" alt="${e.org} logo"></a>
+      <div class="cv-job-title">
+        <div class="cv-job-top">
+          <h3>${e.role}</h3>
+          <span class="cv-when">${e.years}</span>
+        </div>
+        <p class="cv-org"><a href="${e.site}">${e.org}</a> <span>· ${e.type}</span></p>
+      </div>
+    </header>
     <ul>${e.points.map(p => `<li>${p}</li>`).join("")}</ul>
-  </article>`).join("");
+  </article>`;
+
+/* the first three roles fit on page one; the rest continue on page two */
+$("#cv-roles-1").innerHTML = EXPERIENCE.slice(0, 3).map(job).join("");
+$("#cv-roles-2").innerHTML = EXPERIENCE.slice(3).map(job).join("");
+
+const site = $("[data-site]");
+site.href = PROFILE.website;
+site.textContent = host(PROFILE.website);
 
 $("#cv-print").addEventListener("click", () => print());
 

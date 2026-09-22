@@ -23,11 +23,11 @@ const STATS = [
 ];
 
 const HOME_ROLES = [
-  { role: "Filmmaking", line: "Films that let classrooms speak for themselves.", img: S + "film_c.jpg", anchor: "films" },
-  { role: "Podcasting", line: "School students in conversation with leaders.", img: S + "ep_studio_2.jpg", anchor: "films" },
-  { role: "Writing & Editing", line: "Books, essays and op eds on schools and democracy.", img: S + "pub_lbct2.jpg", anchor: "writing" },
-  { role: "Storytelling", line: "Finding the people a story is really about.", img: S + "moc_post.jpg", anchor: "campaigns" },
-  { role: "Facilitating", line: "Forty workshops on storytelling and the Constitution.", img: S + "fac_2.jpg", anchor: "workshops" },
+  { role: "Filmmaking", line: "I write and direct social impact films.", img: S + "film_c.jpg", anchor: "films" },
+  { role: "Podcasting", line: "I produce <i>Up Close & Personal with GenNext</i>, a podcast hosted by school students.", img: S + "ep_studio_2.jpg", anchor: "films" },
+  { role: "Writing & Editing", line: "Books, essays and op-eds on education and democracy.", img: S + "pub_lbct2.jpg", anchor: "writing" },
+  { role: "Storytelling", line: "Finding the people and moments that make a story matter.", img: S + "moc_post.jpg", anchor: "campaigns" },
+  { role: "Facilitating", line: "Designing and facilitating conversations on storytelling, democracy and the Constitution.", img: S + "fac_2.jpg", anchor: "workshops" },
 ];
 
 const CANNES = {
