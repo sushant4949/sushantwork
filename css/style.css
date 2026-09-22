@@ -172,7 +172,8 @@ a.card:hover .arrow { transform: translate(3px, -3px); }
 .tile { background: #fff; border-radius: 16px; padding: 22px 24px; border: 1px solid var(--line); transition: border-color .2s, transform .3s var(--ease); }
 .tile:hover { border-color: var(--red); transform: translateY(-3px); }
 .tile span { display: block; font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
-.tile p { font-family: var(--serif); font-size: 1.25rem; line-height: 1.25; }
+.tile p { font-family: var(--serif); font-size: 1.1rem; line-height: 1.4; }
+.tile p b { font-weight: 600; }
 .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
 .skills span { font-size: .84rem; border: 1px solid var(--ink-3); padding: 6px 14px; border-radius: 100px; }
 

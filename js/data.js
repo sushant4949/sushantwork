@@ -23,11 +23,11 @@ const STATS = [
 ];
 
 const HOME_ROLES = [
-  { role: "Impact Film", line: "Films that let classrooms speak for themselves.", img: S + "film_c.jpg", anchor: "films" },
-  { role: "Podcast", line: "School students in conversation with leaders.", img: S + "ep_studio_2.jpg", anchor: "films" },
-  { role: "Writer & Editor", line: "Books, essays and op eds on schools and democracy.", img: S + "pub_lbct2.jpg", anchor: "writing" },
+  { role: "Filmmaking", line: "Films that let classrooms speak for themselves.", img: S + "film_c.jpg", anchor: "films" },
+  { role: "Podcasting", line: "School students in conversation with leaders.", img: S + "ep_studio_2.jpg", anchor: "films" },
+  { role: "Writing & Editing", line: "Books, essays and op eds on schools and democracy.", img: S + "pub_lbct2.jpg", anchor: "writing" },
   { role: "Storytelling", line: "Finding the people a story is really about.", img: S + "moc_post.jpg", anchor: "campaigns" },
-  { role: "Facilitator", line: "Forty workshops on storytelling and the Constitution.", img: S + "fac_2.jpg", anchor: "workshops" },
+  { role: "Facilitating", line: "Forty workshops on storytelling and the Constitution.", img: S + "fac_2.jpg", anchor: "workshops" },
 ];
 
 const CANNES = {
@@ -37,12 +37,12 @@ const CANNES = {
 };
 
 const ABOUT_TILES = [
-  { label: "Right now", value: "Manager, Communications at Mantra4Change" },
-  { label: "Since 2021", value: "Co-founder of Dialogues on Democracy & Development" },
-  { label: "On the side", value: "Design and communications for Language and Learning Foundation" },
-  { label: "Based in", value: "Bengaluru, India" },
-  { label: "Studied", value: "Education at Azim Premji University. Political Science at BHU." },
-  { label: "Cares about", value: "Public schools, girls' education and constitutional literacy" },
+  { label: "Right now", value: "I work as a storyteller and lead a creative team at <b>Mantra4Change</b>, a Bengaluru based nonprofit." },
+  { label: "On the side", value: "I design and facilitate sessions at Turtle Forum, bringing development practitioners together to think, question and learn." },
+  { label: "Since 2021", value: "I create spaces for dialogue on liberty, equality, fraternity and justice through a collective I co-founded during my postgrad." },
+  { label: "Based in", value: "Bengaluru, Karnataka, with frequent visits to Muzaffarpur and Patna, Bihar." },
+  { label: "Cares about", value: "Friends, family and making the world a little more equal, just and fraternal." },
+  { label: "Studied", value: "Education at Azim Premji University, Political Science at BHU, and later a BEd from MDU." },
 ];
 
 const SKILLS = [
