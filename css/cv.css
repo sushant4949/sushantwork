@@ -8,14 +8,14 @@
   --red: #d4002f;
   --serif: "Fraunces", Georgia, serif;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  /* page margins: kept small at the top; the on-screen sheet and the
+  /* page margins; the on-screen sheet and the
      measuring pass in js/cv.js use the same numbers as @page */
-  --m-top: 7mm;
+  --m-top: 12mm;
   --m-side: 13mm;
   --m-bottom: 10mm;
 }
 
-@page { size: A4; margin: 7mm 13mm 10mm; }
+@page { size: A4; margin: 12mm 13mm 10mm; }
 
 * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 html { background: #e9e4dc; }
@@ -84,7 +84,7 @@ a { color: inherit; text-decoration: none; }
 @media print {
   html { background: #fff; }
   .cv-bar { display: none; }
-  .sheet { width: auto; height: calc(297mm - 17mm); margin: 0; padding: 0; box-shadow: none; }
+  .sheet { width: auto; height: calc(297mm - var(--m-top) - var(--m-bottom)); margin: 0; padding: 0; box-shadow: none; }
   .sheet + .sheet { break-before: page; }
 }
 
