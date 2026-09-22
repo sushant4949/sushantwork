@@ -11,6 +11,11 @@ const PROFILE = {
   website: "https://sushant4949.github.io/sushantwork/",
   portfolio: "https://drive.google.com/drive/folders/1iDiWkDljhmhKN8HVlShESBBqA675HYbx?usp=drive_link",
   photo: "assets/img/profile.jpg",
+  portrait: "assets/img/profile_hero.jpg",
+  /* home page hero; the CV header uses the same lines */
+  titles: ["Writer", "Producer", "Facilitator"],
+  intro: "Curious about people, power, politics and the stories between them.",
+  focus: "I work across storytelling, thought leadership, strategy, and creative direction.",
 };
 
 /* ---------- HOME ---------- */

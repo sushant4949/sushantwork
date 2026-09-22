@@ -14,6 +14,10 @@ function fillShared() {
   $$("[data-linkedin]").forEach(el => el.href = PROFILE.linkedin);
   $$("[data-portfolio]").forEach(el => el.href = PROFILE.portfolio);
   $$("[data-photo]").forEach(el => el.src = PROFILE.photo);
+  $$("[data-portrait]").forEach(el => el.src = PROFILE.portrait);
+  $$("[data-titles]").forEach(el => el.innerHTML = PROFILE.titles.join(" <i>/</i> "));
+  $$("[data-intro]").forEach(el => el.textContent = PROFILE.intro);
+  $$("[data-focus]").forEach(el => el.textContent = PROFILE.focus);
   $$("[data-year]").forEach(el => el.textContent = new Date().getFullYear());
   showLastUpdated();
   $$("[data-nav]").forEach(a => a.classList.toggle("active", a.dataset.nav === page));

@@ -18,14 +18,15 @@
   <button type="button" id="cv-print">Save as PDF</button>
 </div>
 
+<!-- Everything below is filled in by js/cv.js from js/data.js, so the CV follows the website. -->
 <main>
-  <section class="sheet">
+  <section class="sheet" id="page-1">
     <header class="cv-head">
-      <img class="cv-photo" src="assets/img/profile_hero.jpg" alt="Sushant Kumar">
+      <img class="cv-photo" id="cv-photo" alt="">
       <div class="cv-id">
-        <h1>Sushant <em>Kumar</em></h1>
-        <p class="cv-role">Writer <i>/</i> Producer <i>/</i> Facilitator</p>
-        <p class="cv-pitch">Curious about people, power, politics and the stories between them. I work across storytelling, thought leadership, strategy, and creative direction.</p>
+        <h1 id="cv-name"></h1>
+        <p class="cv-role" id="cv-titles"></p>
+        <p class="cv-pitch" id="cv-pitch"></p>
       </div>
       <ul class="cv-contact" id="cv-contact"></ul>
     </header>
@@ -48,13 +49,13 @@
         </section>
         <section>
           <h2>Roles over the years</h2>
-          <div id="cv-roles-1"></div>
+          <div class="cv-jobs" id="cv-roles-1"></div>
         </section>
       </div>
     </div>
   </section>
 
-  <section class="sheet">
+  <section class="sheet" id="page-2">
     <div class="cv-body">
       <aside class="cv-side">
         <section>
@@ -69,11 +70,11 @@
       <div class="cv-main">
         <section>
           <h2>Roles over the years <span>continued</span></h2>
-          <div id="cv-roles-2"></div>
+          <div class="cv-jobs" id="cv-roles-2"></div>
         </section>
       </div>
     </div>
-    <p class="cv-foot">More of my work at <a data-site href="#"></a></p>
+    <p class="cv-foot">More of my work at <a id="cv-site" href="#"></a></p>
   </section>
 </main>
 
