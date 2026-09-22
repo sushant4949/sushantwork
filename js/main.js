@@ -15,6 +15,7 @@ function fillShared() {
   $$("[data-portfolio]").forEach(el => el.href = PROFILE.portfolio);
   $$("[data-photo]").forEach(el => el.src = PROFILE.photo);
   $$("[data-year]").forEach(el => el.textContent = new Date().getFullYear());
+  showLastUpdated();
   $$("[data-nav]").forEach(a => a.classList.toggle("active", a.dataset.nav === page));
 
   const nav = $("#site-nav");
@@ -47,6 +48,20 @@ function card(item, withTag = false) {
         <div class="card-org"><span>${item.org}</span>${item.url ? `<span class="arrow">↗</span>` : ""}</div>
       </div>
     </${tag}>`;
+}
+
+/* footer date comes from the latest commit on GitHub; stays hidden if the lookup fails */
+function showLastUpdated() {
+  const els = $$("[data-updated]");
+  if (!els.length) return;
+  fetch("https://api.github.com/repos/sushant4949/sushantwork/commits?per_page=1")
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(([c]) => {
+      const d = new Date(c.commit.committer.date);
+      const text = d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+      els.forEach(el => { const t = $("time", el); t.dateTime = d.toISOString(); t.textContent = text; el.hidden = false; });
+    })
+    .catch(() => {});
 }
 
 const byNewest = (a, b) => b.date.localeCompare(a.date);

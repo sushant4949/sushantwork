@@ -161,6 +161,14 @@ a.card:hover .play span { transform: scale(1.1); }
 .card-org .arrow { color: var(--red); transition: transform .2s; }
 a.card:hover .arrow { transform: translate(3px, -3px); }
 .card.featured { grid-column: span 2; display: grid; grid-template-columns: 1.1fr 1fr; }
+.card-row { grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.card-row .card.featured { grid-column: auto; display: flex; }
+.card-row .card-thumb, .card-row .card.featured .card-thumb { aspect-ratio: 4/3; min-height: 0; }
+.card-row .card-thumb .tag { font-size: .6rem; padding: 3px 9px; top: 10px; left: 10px; }
+.card-row .card-body { padding: 14px 16px 16px; }
+.card-row .card-body h3, .card-row .card.featured h3 { font-size: 1.08rem; }
+.card-row .card-dek { font-size: .82rem; }
+.card-row .card-org { font-size: .72rem; padding-top: 12px; }
 .card.featured .card-thumb { aspect-ratio: auto; min-height: 280px; }
 .card.featured h3 { font-size: 2.2rem; }
 
@@ -269,7 +277,7 @@ a.card:hover .arrow { transform: translate(3px, -3px); }
 
 /* responsive */
 @media (max-width: 1100px) {
-  .role-cards { grid-template-columns: repeat(3, 1fr); }
+  .role-cards, .card-row { grid-template-columns: repeat(3, 1fr); }
   .card-grid.books { grid-template-columns: repeat(2, 1fr); }
   .timeline { grid-template-columns: repeat(2, 1fr); }
 }
@@ -282,6 +290,7 @@ a.card:hover .arrow { transform: translate(3px, -3px); }
   .stat:nth-child(3) { border-left: 0; }
   .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
   .role-cards { grid-template-columns: repeat(2, 1fr); }
+  .card-row .card.featured { grid-column: auto; }
   .role-card p { max-height: 90px; margin-bottom: 8px; }
   .highlight-grid, .about, .work-hero, .ws-head { grid-template-columns: 1fr; gap: 40px; }
   .card-grid { grid-template-columns: repeat(2, 1fr); }
