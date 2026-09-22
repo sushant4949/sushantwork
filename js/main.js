@@ -109,8 +109,6 @@ function renderEducation() {
 function renderWork() {
   const groups = Object.entries(CATEGORIES).map(([key, c]) => ({ key, ...c, items: WORK.filter(w => w.category === key).sort(byNewest) }));
 
-  $("#jump-bar").innerHTML = groups.map(g => `<a href="#${g.key}">${g.label}</a>`).join("");
-
   $("#work-sections").innerHTML = groups.map(g => `
     <section class="work-section wrap" id="${g.key}">
       <div class="ws-head reveal">
@@ -130,20 +128,6 @@ function renderWork() {
       <p class="tl-org">${e.org}</p>
       <ul>${e.points.map(p => `<li>${p}</li>`).join("")}</ul>
     </article>`).join("");
-
-  const links = $$("#jump-bar a");
-  const sections = groups.map(g => $(`#${g.key}`));
-  const bar = $("#jump-bar");
-  addEventListener("scroll", () => {
-    let current = -1;
-    sections.forEach((s, i) => { if (s.getBoundingClientRect().top < 220) current = i; });
-    links.forEach((a, i) => a.classList.toggle("active", i === current));
-    if (current >= 0) {
-      const a = links[current];
-      const target = a.offsetLeft - bar.clientWidth / 2 + a.offsetWidth / 2;
-      if (Math.abs(bar.scrollLeft - target) > 40) bar.scrollTo({ left: target, behavior: "smooth" });
-    }
-  }, { passive: true });
 }
 
 /* ---------- motion ---------- */

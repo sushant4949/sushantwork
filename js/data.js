@@ -167,23 +167,31 @@ const EXPERIENCE = [
     "Executive Producer of InvokED Studio",
     "Took Mothers of Courage to Cannes Lions 2026",
   ] },
-  { years: "2025 to now", role: "Design & Communications Consultant", site: "https://languageandlearningfoundation.org/", org: "Language and Learning Foundation", type: "Freelance", logo: "assets/img/logos/llf.png", points: [
-    "Contributed to the 10 Year Impact Report",
-    "Co-developed a teacher handbook for FLN classrooms",
+  { years: "Feb 2025 to now", role: "Design & Communications Consultant", site: "https://languageandlearningfoundation.org/", org: "Language and Learning Foundation", type: "Freelance", logo: "assets/img/logos/llf.png", points: [
+    "Contributed to the 10-Year Impact Report, ensuring narrative clarity and visual coherence.",
+    "Co-developed a teacher handbook supporting foundational literacy and numeracy classroom implementation.",
+    "Supported branding and collateral design to strengthen consistent organisational communication.",
   ] },
-  { years: "2024 to 2025", role: "Academic Mentor, Roshni Fellowship", site: "https://www.creaworld.org/", org: "CREA", type: "Freelance", logo: "assets/img/logos/crea.png", points: [
-    "Mentored 12 fellows through a 10 month program on constitutional values",
+  { years: "Nov 2024 to Oct 2025", role: "Academic Mentor, Roshni Program", site: "https://www.creaworld.org/", org: "CREA", type: "Freelance", logo: "assets/img/logos/crea.png", points: [
+    "Mentored 12 cohort members through a 10-month fellowship focused on integrating constitutional values into grassroots social action.",
+    "Facilitated online sessions on democracy, liberty, equality, justice, fraternity, and dignity.",
+    "Guided fellows in developing contextual learning materials and Social Action Projects for their communities.",
+    "Conducted in-person reviews to provide feedback and support the fellows’ work.",
   ] },
   { years: "2023 to 2025", role: "Associate Manager, Communications", site: "https://www.mantra4change.org/", org: "Mantra4Change", type: "Full-time", logo: "assets/img/logos/mantra4change.png", points: [
     "Built fundraising stories for Dialogue for Social Equity, USA",
     "Co-authored op eds with the founders for national media",
   ] },
-  { years: "2022 to 2023", role: "Program Communications Lead", site: "https://www.mantra4change.org/", org: "Mantra4Change", type: "Full-time", logo: "assets/img/logos/mantra4change.png", points: [
-    "Built the communications strategy from the ground up",
-    "Scripted program films and ran the 10th anniversary campaign",
+  { years: "June 2022 to Sep 2023", role: "Program Communications Lead", site: "https://www.mantra4change.org/", org: "Mantra4Change", type: "Full-time", logo: "assets/img/logos/mantra4change.png", points: [
+    "Built and implemented a communications strategy covering messaging, positioning, channels, and audiences.",
+    "Produced blogs, case studies, articles, and program films showcasing on-ground impact and innovation.",
+    "Scripted and coordinated program film productions with external vendors to ensure high-quality outputs.",
+    "Led branding and campaigns for Mantra4Change’s 10th Anniversary, including pre- and post-event communications.",
   ] },
-  { years: "2021 to now", role: "Co-founder", site: "https://www.dialoguesondemocracy.org/", org: "Dialogues on Democracy & Development", type: "Freelance", logo: "assets/img/logos/dod.png", points: [
-    "15 partner organisations and 40 workshops in 12 cities",
-    "Produced the video series Siddhant Samvidhan Ke",
+  { years: "June 2021 to now", role: "Co-Founder", site: "https://www.dialoguesondemocracy.org/", org: "Dialogues on Democracy & Development", type: "Freelance", logo: "assets/img/logos/dod.png", points: [
+    "Co-founded an initiative promoting constitutional literacy and civic participation across India.",
+    "Built partnerships with government bodies, NGOs, and academic institutions, with 15 partner organisations to date.",
+    "Produced the video lecture series <i>Siddhant Samvidhan Ke</i> on constitutional values.",
+    "Delivered 40 workshops across 12 cities, engaging 4,000+ participants in conversations on democracy and civic responsibility.",
   ] },
 ];
