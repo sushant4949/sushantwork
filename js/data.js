@@ -161,11 +161,11 @@ const EXPERIENCE = [
     "Made the case for why social impact communications needs to be political",
     "Facilitated the sessions too",
   ] },
-  { years: "2025 to now", role: "Manager, Communications", site: "https://www.mantra4change.org/", org: "Mantra4Change", type: "Full-time", logo: "assets/img/logos/mantra4change.png", points: [
-    "Leads the communications team across Bihar, Karnataka and Uttar Pradesh",
-    "Ran a statewide Brand Perception Survey that lifted the Brand Health Index by 20%",
-    "Executive Producer of InvokED Studio",
-    "Took Mothers of Courage to Cannes Lions 2026",
+  { years: "Apr 2025 to now", role: "Manager, Communications", site: "https://www.mantra4change.org/", org: "Mantra4Change", type: "Full-time", logo: "assets/img/logos/mantra4change.png", points: [
+    "Lead and mentor the communications team, strengthening storytelling, brand consistency, and program visibility across Bihar, Karnataka, and Uttar Pradesh.",
+    "Led a statewide Brand Perception Survey that contributed to a 20% improvement in Mantra4Change’s Brand Health Index.",
+    "Serve as Executive Producer for <i>InvokED Studio</i>, a video podcast featuring leaders from education and social impact.",
+    "Developed donor communication and fundraising assets for international partnerships and philanthropic engagements, including <i>Mothers of Courage</i>, India’s only SDG Lions shortlisted campaign, which took me to Cannes Lions 2026.",
   ] },
   { years: "Feb 2025 to now", role: "Design & Communications Consultant", site: "https://languageandlearningfoundation.org/", org: "Language and Learning Foundation", type: "Freelance", logo: "assets/img/logos/llf.png", points: [
     "Contributed to the 10-Year Impact Report, ensuring narrative clarity and visual coherence.",
@@ -178,9 +178,11 @@ const EXPERIENCE = [
     "Guided fellows in developing contextual learning materials and Social Action Projects for their communities.",
     "Conducted in-person reviews to provide feedback and support the fellows’ work.",
   ] },
-  { years: "2023 to 2025", role: "Associate Manager, Communications", site: "https://www.mantra4change.org/", org: "Mantra4Change", type: "Full-time", logo: "assets/img/logos/mantra4change.png", points: [
-    "Built fundraising stories for Dialogue for Social Equity, USA",
-    "Co-authored op eds with the founders for national media",
+  { years: "Oct 2023 to Mar 2025", role: "Associate Manager, Communications", site: "https://www.mantra4change.org/", org: "Mantra4Change", type: "Full-time", logo: "assets/img/logos/mantra4change.png", points: [
+    "Created fundraising stories and assets for <b>Dialogue for Social Equity, USA</b>, supporting greater donor engagement and contributions.",
+    "Co-authored thought leadership articles with the Co-founders and COO for tier-1 media platforms, strengthening organisational positioning.",
+    "Facilitated internal Learning & Development sessions, building a culture of storytelling across the organisation.",
+    "Designed and executed a hiring pipeline that expanded the team with diverse skills and talent.",
   ] },
   { years: "June 2022 to Sep 2023", role: "Program Communications Lead", site: "https://www.mantra4change.org/", org: "Mantra4Change", type: "Full-time", logo: "assets/img/logos/mantra4change.png", points: [
     "Built and implemented a communications strategy covering messaging, positioning, channels, and audiences.",
