@@ -89,6 +89,9 @@ function renderHome() {
     CANNES.photos.map(p => `<figure class="tall"><img src="${p}" alt="Sushant Kumar on the red carpet at Cannes Lions 2026" loading="lazy"></figure>`).join("") +
     CANNES.moments.map(p => `<figure class="wide"><img src="${p}" alt="A moment from Cannes Lions 2026" loading="lazy"></figure>`).join("");
 
+  $("#sdg-link").href = SDG_AWARD.pressUrl;
+  $("#sdg-honours").innerHTML = SDG_AWARD.honours.map(h => `<li>${h}</li>`).join("");
+
   $("#selected-work").innerHTML = WORK.filter(w => w.home).sort(byNewest).map(w => card(w, true)).join("");
 
   $("#about-tiles").innerHTML = ABOUT_TILES.map(t => `

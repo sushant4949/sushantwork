@@ -139,6 +139,24 @@ p { margin: 0; }
 .hl-collage .tall:nth-child(even) { transform: translateY(36px); }
 .hl-collage .wide { grid-column: span 2; aspect-ratio: 16/10; margin-top: 36px; }
 
+/* UN SDG award, follows the Cannes highlight */
+.sdg { background: var(--paper-2); }
+.sdg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+.sdg-logo { width: min(100%, 400px); margin-bottom: 34px; }
+.sdg-copy h2 { font-size: clamp(2.2rem, 4vw, 3.4rem); line-height: 1.08; margin-bottom: 26px; }
+.sdg-text { color: var(--ink-2); font-size: 1.05rem; line-height: 1.65; margin-bottom: 18px; }
+.sdg-text b, .sdg-text i { color: var(--ink); }
+.sdg-text b { font-weight: 600; }
+.sdg-honours { list-style: none; padding: 0; margin: 28px 0 30px; display: flex; flex-wrap: wrap; gap: 8px; }
+.sdg-honours li { font-size: .82rem; font-weight: 500; padding: 7px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); color: var(--ink-2); }
+.sdg-honours li:first-child { background: var(--red); border-color: var(--red); color: #fff; }
+.sdg-collage { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.sdg-collage figure { position: relative; margin: 0; border-radius: 14px; overflow: hidden; aspect-ratio: 1/1; }
+.sdg-collage .sdg-wide { grid-column: span 2; aspect-ratio: 3/2; }
+.sdg-collage img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease); }
+.sdg-collage img.sdg-me { object-position: center 80%; }
+.sdg-collage figure:hover img { transform: scale(1.05); }
+
 /* cards */
 .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .card { background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; transition: transform .35s var(--ease), box-shadow .35s, border-color .35s; }
@@ -294,7 +312,7 @@ a.card:hover .arrow { transform: translate(3px, -3px); }
   .role-cards { grid-template-columns: repeat(2, 1fr); }
   .card-row .card.featured { grid-column: auto; }
   .role-card p { max-height: 90px; margin-bottom: 8px; }
-  .highlight-grid, .about, .work-hero, .ws-head { grid-template-columns: 1fr; gap: 40px; }
+  .highlight-grid, .about, .work-hero, .ws-head, .sdg-grid { grid-template-columns: 1fr; gap: 40px; }
   .card-grid { grid-template-columns: repeat(2, 1fr); }
   .card.featured { grid-column: span 2; }
   .ach-grid { grid-template-columns: repeat(2, 1fr); }

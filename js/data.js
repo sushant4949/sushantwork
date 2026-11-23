@@ -41,6 +41,18 @@ const CANNES = {
   pressUrl: "https://aninews.in/news/business/indias-only-sdg-lions-shortlist-at-cannes-2026-comes-from-a-grassroots-education-movement-in-bihar20260627133645/",
 };
 
+const SDG_AWARD = {
+  pressUrl: "https://www.thehindu.com/education/documentary-on-girls-education-campaign-in-rural-india-wins-un-sdg-award/article71689618.ece",
+  honours: [
+    "UN SDG Action Award 2026, Creativity",
+    "SDG Lions shortlist, Cannes Lions 2026",
+    "Platinum SABRE, Best in Show, South Asia 2026",
+    "Gold SABRE, Public Education, South Asia and Asia Pacific 2026",
+    "Best Inspirational Film, Los Angeles Film Awards 2026",
+    "Silver, ABBY Awards 2026",
+  ],
+};
+
 const ABOUT_TILES = [
   { label: "Right now", value: "I work as a storyteller and lead a creative team at Mantra4Change, a Bengaluru based nonprofit." },
   { label: "On the side", value: "I design and facilitate sessions at Turtle Forum, bringing development practitioners together to rethink nonprofit communications." },
