@@ -36,7 +36,7 @@ const HOME_ROLES = [
 ];
 
 const CANNES = {
-  photos: [S + "rc_1.jpg", S + "rc_3.jpg", S + "rc_2.jpg", S + "rc_4.jpg"],
+  photos: [S + "rc_1.jpg", S + "rc_3.jpg"],
   moments: [S + "ses_1.jpg", S + "fr_1.jpg"],
   pressUrl: "https://aninews.in/news/business/indias-only-sdg-lions-shortlist-at-cannes-2026-comes-from-a-grassroots-education-movement-in-bihar20260627133645/",
 };
@@ -107,7 +107,7 @@ const EDUCATION = [
 ];
 
 const ACHIEVEMENTS = [
-  { year: "2026", title: "ERA Cohort, Cannes Lions", text: "Selected for the Equity, Representation and Accessibility cohort at the International Festival of Creativity in France.", photos: [S + "rc_1.jpg", S + "rc_3.jpg", S + "rc_2.jpg"] },
+  { year: "2026", title: "ERA Cohort, Cannes Lions", text: "Selected for the Equity, Representation and Accessibility cohort at the International Festival of Creativity in France.", photos: [S + "cannes_sel_1.jpg", S + "cannes_sel_2.jpg", S + "cannes_sel_3.jpg"] },
   { year: "2024 to 2025", title: "RASTA Fellow", text: "Fellowship for promoting constitutional literacy.", img: S + "ach_rasta.jpg" },
   { title: "Alumni Incubator Accelerator", text: "Selected by Azim Premji University.", img: S + "ach_incubator.jpg" },
   { title: "National Conference paper", text: "“Can Constitutional Morality lead to improved civic engagement?” selected for the National Conference at Kerala University.", img: S + "ach_conference.jpg" },

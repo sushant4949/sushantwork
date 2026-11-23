@@ -135,7 +135,7 @@ p { margin: 0; }
 .hl-collage figure { margin: 0; border-radius: 14px; overflow: hidden; }
 .hl-collage img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease); }
 .hl-collage figure:hover img { transform: scale(1.05); }
-.hl-collage .tall { aspect-ratio: 1/2; }
+.hl-collage .tall { grid-column: span 2; aspect-ratio: 3/4; }
 .hl-collage .tall:nth-child(even) { transform: translateY(36px); }
 .hl-collage .wide { grid-column: span 2; aspect-ratio: 16/10; margin-top: 36px; }
 
@@ -195,7 +195,8 @@ a.card:hover .arrow { transform: translate(3px, -3px); }
 /* about */
 .about { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: start; }
 .about-head h2 { font-size: clamp(2.4rem, 5vw, 4rem); margin-bottom: 36px; }
-.about-photo { width: 70%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
+.about-photo { width: 82%; aspect-ratio: 4/5; object-fit: cover; object-position: center 45%; border-radius: 24px; box-shadow: 16px 16px 0 var(--red); transform: rotate(-2deg); transition: transform .6s var(--ease); }
+.about-photo:hover { transform: rotate(0deg); }
 .tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 26px; }
 .tile { background: #fff; border-radius: 16px; padding: 22px 24px; border: 1px solid var(--line); transition: border-color .2s, transform .3s var(--ease); }
 .tile:hover { border-color: var(--red); transform: translateY(-3px); }
@@ -229,8 +230,8 @@ a.card:hover .arrow { transform: translate(3px, -3px); }
 .ach:hover { transform: translateY(-5px); }
 .ach.big { grid-column: span 2; grid-row: span 2; }
 .ach-img { aspect-ratio: 4/3; overflow: hidden; }
-.ach-collage { flex: 1; min-height: 340px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; overflow: hidden; }
-.ach-collage img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+.ach-collage { flex: none; aspect-ratio: 9/4; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; overflow: hidden; }
+.ach-collage img { width: 100%; height: 100%; object-fit: cover; }
 .ach-img img { width: 100%; height: 100%; object-fit: cover; }
 .ach-body { padding: 24px; }
 .ach-year { font-size: .74rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
@@ -343,6 +344,6 @@ a.card:hover .arrow { transform: translate(3px, -3px); }
   .degree { grid-template-columns: 1fr; gap: 16px; }
   .degree-logo { width: 72px; height: 72px; padding: 10px; border-radius: 16px; }
   .ach.big { grid-column: auto; }
-  .ach-collage { min-height: 300px; }
+  .ach.big .ach-body { flex: 1; }
   .foot-links { gap: 14px; flex-wrap: wrap; }
 }
